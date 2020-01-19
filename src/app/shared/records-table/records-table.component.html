@@ -1,0 +1,89 @@
+<!-- Editable table -->
+<div class="card ">
+    <h2 class="card-header text-center font-weight-bold py-4">Article Data</h2>
+    <div class="card-body">
+      <div style="overflow-x: auto;" class="justify-content-center table-editable table-responsive-sm text-nowrap">
+        <table id="table" class="table table-striped table-font">
+          <tr>
+            <th class="text-center">Hauptartikelnr</th>
+            <th class="text-center">Artikelname</th>
+            <th class="text-center">Hersteller</th>
+            <th class="text-center">Materialangaben</th>
+            <th class="text-center" >Beschreibung</th>
+            <th class="text-center">Geschlecht</th>
+            <th class="text-center">Produktart</th>
+            <th class="text-center">Ärmel</th>
+            <th class="text-center">Bein</th>
+            <th class="text-center">Kragen</th>
+            <th class="text-center">Herstellung</th>
+            <th class="text-center">Taschenart</th>
+            <th class="text-center">Grammatur</th>
+            <th class="text-center">Material</th>
+            <th class="text-center">Ursprungsland</th>
+            <th class="text-center">Bildname</th>
+            <th class="text-center">Action</th>
+          </tr>
+          <tr scope="row" *ngFor="let record of records | paginate: config ;let i = index;">
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'hauptartikelnr', $event)" (blur)="updateList(i, 'hauptartikelnr', $event)">{{record.hauptartikelnr}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'artikelname', $event)" (blur)="updateList(i, 'artikelname', $event)">{{record.artikelname}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'hersteller', $event)" (blur)="updateList(i, 'hersteller', $event)">{{record.hersteller}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'materialangaben', $event)" (blur)="updateList(i, 'materialangaben', $event)">{{record.materialangaben}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'beschreibung', $event)" (blur)="updateList(i, 'beschreibung', $event)">{{record.beschreibung}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'geschlecht', $event)" (blur)="updateList(i, 'geschlecht', $event)">{{record.geschlecht}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'produktart', $event)" (blur)="updateList(i, 'produktart', $event)">{{record.produktart}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'aermel', $event)" (blur)="updateList(i, 'aermel', $event)">{{record.aermel}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'bein', $event)" (blur)="updateList(i, 'bein', $event)">{{record.bein}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'kragen', $event)" (blur)="updateList(i, 'kragen', $event)">{{record.kragen}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'herstellung', $event)" (blur)="updateList(i, 'herstellung', $event)">{{record.herstellung}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'taschenart', $event)" (blur)="updateList(i, 'taschenart', $event)">{{record.taschenart}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'grammatur', $event)" (blur)="updateList(i, 'grammatur', $event)">{{record.grammatur}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'material', $event)" (blur)="updateList(i, 'material', $event)">{{record.material}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'ursprungsland', $event)" (blur)="updateList(i, 'ursprungsland', $event)">{{record.ursprungsland}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (keyup)="changeValue(i, 'bildname', $event)" (blur)="updateList(i, 'bildname', $event)">{{record.bildname}}</span>
+            </td>
+            <td>
+              <span class="table-remove">
+                <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="remove(i)">Remove</button>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+
+      </div>
+    </div>
+  </div>
+  <!-- Editable table -->
+
+  

@@ -1,0 +1,80 @@
+<!--Add card content-->
+<mdb-card class="mb-4 wow fadeIn" *ngIf="records.length > 0">
+  <mdb-card-body class="d-sm-flex justify-content-between">
+    <button mdbBtn type="button" gradient="peach" block="true" mdbWavesEffect
+    (click)="frame.show()">Add New Record <mdb-icon fas icon="plus-square"></mdb-icon></button>
+  </mdb-card-body>
+</mdb-card>
+<!--Add card content-->
+
+<!-- Add record Modal -->
+<div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Add New Record</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="alert alert-info" role="alert">
+          Below are the required fields to create new entry in table, rest all the fields can be edited inline
+          in the table.
+        </div>
+        <div class="md-form mb-4">
+          <mdb-icon fas icon="hashtag" class="prefix grey-text"></mdb-icon>
+          <input type="text" id="hauptartikelnr" class="form-control" [formControl]="hauptartikelnr"
+                 mdbInput mdbValidate>
+          <label for="hauptartikelnr">hauptartikelnr</label>
+          <mdb-error
+            *ngIf="hauptartikelnr.invalid && (hauptartikelnr.dirty || hauptartikelnr.touched)">
+            Input invalid
+          </mdb-error>
+          <mdb-success
+            *ngIf="hauptartikelnr.valid && (hauptartikelnr.dirty || hauptartikelnr.touched)">
+            Input valid
+          </mdb-success>
+        </div>
+
+        <div class="md-form mb-4">
+          <mdb-icon fas icon="cart-plus" class="prefix grey-text"></mdb-icon>
+          <input type="text" id="artikelname" class="form-control" [formControl]="artikelname"
+                 mdbInput mdbValidate>
+          <label for="artikelname">artikelname</label>
+          <mdb-error
+            *ngIf="artikelname.invalid && (artikelname.dirty || artikelname.touched)">
+            Input invalid
+          </mdb-error>
+          <mdb-success
+            *ngIf="artikelname.valid && (artikelname.dirty || artikelname.touched)">
+            Input valid
+          </mdb-success>
+        </div>
+
+        <div class="md-form mb-4">
+          <mdb-icon fas icon="chalkboard-teacher" class="prefix grey-text"></mdb-icon>
+          <input type="text" id="hersteller" class="form-control" [formControl]="hersteller"
+                 mdbInput mdbValidate>
+          <label for="hersteller">hersteller</label>
+          <mdb-error
+            *ngIf="hersteller.invalid && (hersteller.dirty || hersteller.touched)">
+            Input invalid
+          </mdb-error>
+          <mdb-success
+            *ngIf="hersteller.valid && (hersteller.dirty || hersteller.touched)">
+            Input valid
+          </mdb-success>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="submit" [disabled]="!validatingForm.valid" mdbBtn gradient="peach" (click)="addRecord();" rounded="true" mdbWavesEffect>Add
+          <mdb-icon far icon="plus-square" class="ml-1"></mdb-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Add record Modal -->

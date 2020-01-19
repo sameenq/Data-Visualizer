@@ -1,0 +1,10 @@
+<button mdbBtn class="file-upload-button wow fadeInLeft" >
+    Upload CSV <mdb-icon fas icon="upload" class="ml-2"></mdb-icon>
+	<input type="file" #csvReader (change)="uploadListener($event)"/>
+</button>
+
+<button mdbBtn color="cyan" class="wow fadeInLeft" data-wow-delay="0.3s"
+*ngIf="records.length > 0" (click)="exportCSV()">Export Table <mdb-icon fas icon="download" class="ml-2"></mdb-icon>
+</button>
+
+  

@@ -1,0 +1,139 @@
+// .intro-header {
+//     height: unset !important;
+//   }
+
+//   .navbar-brand {
+//     font-family: Rancho;
+//     font-size: 2rem;
+//   }
+
+//   .h1-responsive {
+//     font-family: Rancho;
+//     font-size: 3rem;
+//     text-shadow: 0.3rem 0.3rem 0.3rem #ffaf7b; 
+//   }
+
+//   .intro-2 {
+//     background-size: cover;
+//   }
+
+//   .view {
+//    height: 100vh !important;
+//   }
+
+//   .btn .fa {
+//     margin-left: 3px;
+//   }
+
+//   .top-nav-collapse {
+//     background-color: #d76d77 !important;
+//   }
+
+//   .navbar:not(.top-nav-collapse) {
+//     background: transparent !important;
+//   }
+
+//   @media (max-width: 768px) {
+//     .navbar:not(.top-nav-collapse) {
+//       background: #d76d77 !important;
+//     }
+//   }
+//   h6 {
+//     line-height: 1.3;
+//     font-family: 'Raleway', sans-serif;
+//   }
+//   .rgba-gradient .full-bg-img {
+//     background: linear-gradient(45deg, #3a1c71 , #d76d77 , #ffaf7b 100%);
+//   }
+
+//   @media (max-width: 450px) {
+//     .margins {
+//       margin-right: 1rem;
+//       margin-left: 1rem;
+//     }
+//   }
+//   @media (max-width: 740px) {
+//     .full-height,
+//     .full-height body,
+//     .full-height header,
+//     .full-height header .view {
+//       height: 1020px;
+//     }
+//   }
+
+html,
+body,
+header,
+.view {
+  min-height: 100vh;
+}
+
+.navbar-brand {
+  font-family: Rancho;
+  font-size: 2rem;
+}
+
+.h1-responsive {
+  font-family: Rancho;
+  text-shadow: 0.3rem 0.3rem 0.3rem #ffaf7b; 
+}
+
+.hero-text {
+    font-family: Arima Madurai;
+  }
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 1000px;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 600px;
+  }
+}
+
+.btn .fa {
+  margin-left: 3px;
+}
+
+.top-nav-collapse {
+  background-color:  #d76d77 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background:  #d76d77 !important;
+  }
+}
+
+.btn-white {
+  color: black !important;
+}
+
+h6 {
+  line-height: 1.7;
+}
+
+.rgba-gradient {
+  background: -moz-linear-gradient(45deg,#3a1c71 , #d76d77 , #ffaf7b 100%);
+  background: -webkit-linear-gradient(45deg,#3a1c71 , #d76d77 , #ffaf7b 100%);
+  background: -webkit-gradient(linear, 45deg, #3a1c71 , #d76d77 , #ffaf7b);
+  background: -o-linear-gradient(45deg, #3a1c71 , #d76d77 , #ffaf7b 100%);
+  background: linear-gradient(to 45deg, #3a1c71 , #d76d77 , #ffaf7b 100%);
+  background: -webkit-linear-gradient(45deg, #3a1c71 , #d76d77 , #ffaf7b 100%)
+}
+
+.view.mask {
+  overflow: auto !important;
+}

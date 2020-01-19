@@ -1,0 +1,25 @@
+.table-font {
+  font-family: Arima Madurai;
+}
+
+h2 {
+  font-family: Rancho;
+  text-shadow: 0.3rem 0.3rem 0.3rem #ddca77; 
+  color:rgb(82, 47, 77);
+}
+@media all and (min-width: 768px) {
+    tr  {
+      td {
+        vertical-align: middle !important;
+      }
+      span {
+        &:not([class]) {
+          padding: 1rem 1rem;
+        }
+      }
+    }
+
+    td {
+      overflow-wrap:break-word;
+    }
+  }

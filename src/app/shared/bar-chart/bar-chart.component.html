@@ -1,0 +1,24 @@
+<!--Card Primary-->
+<div class="card text-center z-depth-2" *ngIf="records.length > 0">
+    <div class="card-header">
+       <h1>Count of Product by Manufacturer</h1>
+    </div>
+   <div class="card-body">
+       <!--Chart content-->
+       <div style="display: block">
+        <canvas mdbChart 
+            [chartType]="chartType"
+            [datasets]="chartDatasets" 
+            [labels]="chartLabels"
+            [colors]="chartColors"
+            [options]="chartOptions"
+            [legend]="true">
+        </canvas>
+    </div>
+       <!--Chart content-->
+    </div>
+ </div>
+ <!--/.Card Primary-->
+
+
+          

@@ -1,0 +1,59 @@
+<!--Main Page Navigation-->
+<main>
+  
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row py-5">
+
+      <!--Grid column-->
+      <div class="col-md-12 text-center main-text">
+        <p>Lightweight plugin for import and export data from CSV files.
+            It support inline table editing. Morever a user can add a new record <br/>and can
+            remove an entire row.
+            It also generates data based on the content of CSV File.
+      </p>
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+     <!--Grid row-->
+     <div class="row py-5">
+      <!--Grid column-->
+      <div class="col-md-6">
+        <app-pie-chart></app-pie-chart>
+      </div>
+      <!--Grid column-->
+      <!--Grid column-->
+      <div class="col-md-6">
+        <app-bar-chart></app-bar-chart>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+    
+    <!--Grid row-->
+    <div class="row py-2">
+      <!--Grid column-->
+      <div class="col-md-12 ">
+        <app-new-record></app-new-record>  
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+
+    <!--Grid row-->
+    <div class="row py-5" *ngIf="records.length > 0" >
+    <!--Grid column-->
+    <div class="col-md-12">
+      <app-records-table></app-records-table>
+    </div>
+    <!--Grid column-->
+  </div>
+  <!--Grid row-->
+
+  </div>
+</main>
+<!--Main Page Navigation-->
